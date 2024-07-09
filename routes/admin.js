@@ -19,7 +19,6 @@ router.post(
       .trim(),
     body("price").isFloat().withMessage('Price must be a number.'),
     body("description")
-      .isAlphanumeric().withMessage('Description must be alphanumeric.')
       .isLength({ min: 5, max: 400 }).withMessage('Description must be between 5 and 400 characters.')
       .trim()
   ],
